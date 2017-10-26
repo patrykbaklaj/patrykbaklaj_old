@@ -1,2 +1,137 @@
 @import "./partials/reset";
 @import "./partials/animations";
+@import "./partials/colors";
+
+body {
+  position: relative;
+  // font-size: 1.3vmax;
+  @media screen and (min-width: 769px){
+    font-size: 1.1vmax;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 1.8vmax;
+  }
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+}
+
+// for animation purpose
+body, .hello-text, .arrow {
+  display: none;
+}
+
+.welcome {
+  background: $welcome-background;
+  color: $welcome-text;
+  .hello-container {
+    height: 100%;
+    .row {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hello-text {
+      font-size: 3em;
+      text-align: center;
+      position: absolute;
+      top: 55%;
+      left: 0;
+      right: 0;
+      text-shadow: 0 0 15px $welcome-text;
+    }
+    .hello-text-after {
+      background: black;
+      opacity: 0.75;
+      padding: 1em;
+    }
+    .arrow {
+      position: absolute;
+      bottom: 6vh;
+      left: 0;
+      right: 0;
+      text-align: center;
+      p {
+        margin: 0.5em auto;
+      }
+      img {
+        display: inline-block;
+        width: 2em;
+      }
+    }
+  }
+}
+
+.background-welcome {
+  background: url('../assets/images/welcome_background2.jpg');
+  animation: imageAnimation 2s linear;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about {
+  text-align: center;
+  color: #2A2A2A;
+  background-color: black;
+  .row {
+    margin: auto;
+  }
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  div[class^='col'] {
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:first-of-type {
+      background: black;
+      color: $about-background;
+    }
+    &:last-of-type {
+      background: $about-background;
+    }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      padding-bottom: 0.5em;
+      border-bottom: 2px solid orange;
+    }
+    h3 {
+      font-size: 2em;
+    }
+    li {
+      list-style: none;
+      height: 3em;
+      display: block;
+      margin: 2em;
+      a {
+        text-decoration: none;
+        color: inherit;
+        img {
+          height: 100%;
+        }
+      }
+    }
+    p {
+      margin: auto 1em;
+      font-size: 1.5em;
+      display: inline-block;
+      line-height: 100%;
+    }
+    i {
+      display: block;
+      color: black;
+      font-size: 2em;
+      margin-top: 1em;
+    }
+  }
+}

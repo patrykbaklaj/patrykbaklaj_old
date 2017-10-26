@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta name="description" content="Patryk Baklaj - Front End Developer">
+  <meta name="author" content="Patryk Baklaj">
+
+  <title>Patryk Bakłaj</title>
+
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <!-- jQuery -->
@@ -16,10 +23,123 @@
   <!-- stylesheet -->
   <link rel="stylesheet" type="text/css" href="./build/main.css">
 
-  <title>Patryk Bakłaj</title>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
 </head>
 <body>
 
-  <script type="text/javascript" src="./build/out.js"></script>
+  <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">
+        <h2 id="top">P. B.</h2>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<header id="home">
+  <section class="welcome fill-screen">
+    <div class="container hello-container">
+      <div class="row">
+
+        <h1 class="hello-text">
+          Looking for Front-end developer?
+        </h1>
+        <div class="arrow">
+          <p>Scroll down</p>
+          <img class="img-responsive" src="./assets/images/arrow-down-bold.svg">
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+  <section id="about">
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <h2>Few words about me!</h2>
+        <p>
+          Hello! Nice to have You on my website. My name is Patryk and I am a Front-End developer.
+          <br><br>
+          Few months ago, I graduated intensive Front-End bootcamp organized by Coders Lab and I'm still learning new technologies.
+          <br><br>
+          If you want to know more about me and my skills, please browse this portfolio website or contact me. You can also download my resume.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Where You can find me?</h3>
+        <div class="inside_container">
+          <ul>
+            <li>
+            <a href="https://github.com/patrykbaklaj" target="_blank" >
+                <p>Github</p>
+                <img src="./assets/images/github_icon.png" alt="github icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/patryk-baklaj/" target="_blank">
+                <p>Linkedin</p>
+                <img src="./assets/images/linkedin_icon.svg" alt="linkedin logo">
+              </a>
+              </li>
+              <li>
+            <a href="https://www.goldenline.pl/patryk-baklaj/" target="_blank">
+                <p>Golden Line</p>
+                <img src="./assets/images/goldenline_icon.svg" alt="goldenline logo">
+            </a>
+          </li>
+          </ul>
+
+          <div>
+            <p class="download_resume">
+              Download my resume!
+            </p>
+            <a href="assets/Patryk Baklaj CV.pdf" target="_blank"><i class="glyphicon glyphicon-circle-arrow-down"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.row -->
+
+  </section> <!-- /end of about -->
+</main>
+
+<footer>
+
+</footer>
+
+<script type="text/javascript" src="./build/out.js"></script>
+
+
 </body>
 </html>
