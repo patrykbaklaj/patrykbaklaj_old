@@ -85,7 +85,14 @@ body, .hello-text, .arrow, #navbar {
 }
 
 .background-welcome {
-  background: url('../assets/images/welcome_background2.jpg');
+  @media screen and (max-width: 768px) {
+    background: url('../assets/images/welcome_background2-mobile.jpg') 0 0;
+  }
+  @media screen and (min-width: 769px) {
+    background: url('../assets/images/welcome_background2.jpg') 0 0;
+  }
+
+  background-size: cover;
   animation: imageAnimation 2s linear;
 }
 
