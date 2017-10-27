@@ -91,17 +91,18 @@ body, .hello-text, .arrow, #navbar {
   @media screen and (min-width: 769px) {
     background: url('../assets/images/welcome_background2.jpg') 0 0;
   }
-
-  background-size: cover;
   animation: imageAnimation 2s linear;
 }
 
 .parallax {
   // height: 100vh;
+  background-size: auto;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  @media screen and (max-width: 768px) {
+    background-attachment: initial;
+  }
 }
 
 .section-header {

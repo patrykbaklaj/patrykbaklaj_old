@@ -112,7 +112,6 @@ body, .hello-text, .arrow, #navbar {
         width: 2em; }
 
 .background-welcome {
-  background-size: cover;
   -webkit-animation: imageAnimation 2s linear;
   animation: imageAnimation 2s linear; }
   @media screen and (max-width: 768px) {
@@ -123,10 +122,13 @@ body, .hello-text, .arrow, #navbar {
       background: url(d14d3c4a9bb13c806f5825cd522617ac.jpg) 0 0; } }
 
 .parallax {
+  background-size: auto;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .parallax {
+      background-attachment: initial; } }
 
 .section-header {
   font-size: 3em;
