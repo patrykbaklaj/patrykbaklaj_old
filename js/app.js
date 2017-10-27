@@ -1,45 +1,45 @@
 $(document).ready(function() {
 
+  // for setting image size while resizing
   setWindowHeight();
-
-  $("body").fadeIn('fast', animateH1);
-
-
   $(window).on("load resize", function () {
     setWindowHeight();
   });
 
-  $(".arrow img").click(function() {
-    scrollDown();
+  // for animation purpose
+  $("body").fadeIn('fast', animateH1);
+
+
+
+
+// scrollspy for navbar
+  $('body, html').scrollspy({
+    target: '#navbar',
+    offset: 150
   });
 
 
-  // $('body, html').scrollspy({
-  //   target: '#navbar',
-  //   offset: 150
-  // })
-  //
-  // $('nav a, #to-top').bind('click', function() {
-  //   $('html, body').stop().animate({
-  //     scrollTop: $($(this).attr('href')).offset().top - 50
-  //   }, 1400, 'easeInExpo');
-  //   event.preventDefault();
-  // })
-  //
-  // $('.carousel a.btn-primary').bind('click', function() {
-  //   $('html, body').stop().animate({
-  //     scrollTop: $('#services').offset().top - 50
-  //   }, 1200, 'easeInExpo');
-  //   event.preventDefault();
-  // })
+// scrolling effects for menu
+  $('nav a, #to-top').bind('click', function() {
+    $('html, body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top - 50
+    }, 1400, 'easeInExpo');
+    event.preventDefault();
+  })
+
+  // scrolling effects for arrow
+  $('.arrow').bind('click', function() {
+    $('html, body').stop().animate({
+      scrollTop: $('#about').offset().top - 50
+    }, 1000, 'easeInExpo');
+    event.preventDefault();
+  })
 
 
   function setWindowHeight() {
     $(".fill-screen").css("height", window.innerHeight);
   }
 
-  //
-  //
 
   // first section animation
   function animateH1 (){
@@ -61,14 +61,7 @@ $(document).ready(function() {
   };
 
   function showArrow(){
-    $(".arrow").fadeIn();
+    $(".arrow, #navbar").fadeIn("600");
   }
-  //
-  function scrollDown(){
-    $('html, body').animate({
-      scrollTop: $("#about").offset().top
-    }, 800);
 
-  }
-  //
 });

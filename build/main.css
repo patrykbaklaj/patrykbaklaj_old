@@ -53,8 +53,28 @@ body {
   body h1, body h2, body h3 {
     font-weight: bold; }
 
-body, .hello-text, .arrow {
+body, .hello-text, .arrow, #navbar {
   display: none; }
+
+#navbar {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  #navbar li.active a {
+    background-color: transparent;
+    border-bottom: 2px solid;
+    border-color: orange;
+    -webkit-transition: border-color 1s;
+    -o-transition: border-color 1s;
+    transition: border-color 1s; }
+
+.cbp-af-header {
+  padding: 1.5em 0;
+  margin: 0; }
+
+.cbp-af-header-shrink {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .welcome {
   background: black;
@@ -79,6 +99,7 @@ body, .hello-text, .arrow {
       opacity: 0.75;
       padding: 1em; }
     .welcome .hello-container .arrow {
+      cursor: pointer;
       position: absolute;
       bottom: 6vh;
       left: 0;
@@ -343,6 +364,11 @@ body, .hello-text, .arrow {
   color: white;
   height: 2em;
   line-height: 2em; }
-  #footer a, #footer i {
+  #footer a {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    #footer a:hover {
+      color: orange; }

@@ -18,8 +18,27 @@ body {
 }
 
 // for animation purpose
-body, .hello-text, .arrow {
+body, .hello-text, .arrow, #navbar {
   display: none;
+}
+
+#navbar {
+  li.active a {
+    background-color: transparent;
+    border-bottom: 2px solid;
+    border-color: orange;
+    transition: border-color 1s;
+  }
+  transition: all 0.4s;
+}
+// navbar shrink style
+.cbp-af-header {
+  padding: 1.5em 0;
+  margin: 0;
+}
+.cbp-af-header-shrink {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .welcome {
@@ -48,6 +67,7 @@ body, .hello-text, .arrow {
       padding: 1em;
     }
     .arrow {
+      cursor: pointer;
       position: absolute;
       bottom: 6vh;
       left: 0;
@@ -342,8 +362,13 @@ body, .hello-text, .arrow {
   color: white;
   height: 2em;
   line-height: 2em;
-  a, i {
+  a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s;
+    &:hover {
+      color: orange;
+    }
   }
+
 }
