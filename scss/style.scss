@@ -94,16 +94,7 @@ body, .hello-text, .arrow, #navbar {
   animation: imageAnimation 2s linear;
 }
 
-.parallax {
-  // height: 100vh;
-  background-size: auto;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  @media screen and (max-width: 768px) {
-    background-attachment: initial;
-  }
-}
+
 
 .section-header {
   font-size: 3em;
@@ -167,7 +158,12 @@ body, .hello-text, .arrow, #navbar {
 }
 
 .background-skills {
-  background-image: url('../assets/images/tech_stack.jpg');
+  @media screen and (max-width: 768px) {
+    background: url('../assets/images/tech_stack_mobile.jpg') 0 0;
+  }
+  @media screen and (min-width: 769px) {
+    background: url('../assets/images/tech_stack.jpg') 0 0;
+  }
 }
 
 #skills {
@@ -195,7 +191,12 @@ body, .hello-text, .arrow, #navbar {
 }
 
 .background-contact {
-  background-image: url('../assets/images/contact_background.jpg');
+  @media screen and (max-width: 768px) {
+    background: url('../assets/images/contact_background_mobile.jpg') 0 0;
+  }
+  @media screen and (min-width: 769px) {
+    background: url('../assets/images/contact_background.jpg') 0 0;
+  }
 }
 
 
@@ -379,4 +380,14 @@ body, .hello-text, .arrow, #navbar {
     }
   }
 
+}
+
+.parallax {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    background-attachment: scroll;
+  }
 }
