@@ -43,7 +43,8 @@ table {
 
 body {
   position: relative;
-  background: black; }
+  background: black;
+  font-family: 'Roboto', sans-serif; }
   @media screen and (min-width: 769px) {
     body {
       font-size: 1.1vmax; } }
@@ -67,6 +68,12 @@ body, .hello-text, .arrow, #navbar {
     -webkit-transition: border-color 1s;
     -o-transition: border-color 1s;
     transition: border-color 1s; }
+  #navbar .navbar-brand {
+    color: #d3d3d3;
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 0 0 3px gray; }
 
 .cbp-af-header {
   padding: 1.5em 0;
@@ -75,9 +82,11 @@ body, .hello-text, .arrow, #navbar {
 .cbp-af-header-shrink {
   padding-top: 0;
   padding-bottom: 0; }
+  .cbp-af-header-shrink #top {
+    font-size: 0.65em; }
 
 .welcome {
-  background: black;
+  background: rgba(0, 0, 0, 0.75);
   color: white; }
   .welcome .hello-container {
     height: 100%; }
@@ -93,10 +102,9 @@ body, .hello-text, .arrow, #navbar {
       top: 55%;
       left: 0;
       right: 0;
-      text-shadow: 0 0 15px white; }
+      text-shadow: 0 0 30px white; }
     .welcome .hello-container .hello-text-after {
-      background: black;
-      opacity: 0.75;
+      background: rgba(0, 0, 0, 0.75);
       padding: 1em; }
     .welcome .hello-container .arrow {
       cursor: pointer;
@@ -235,7 +243,11 @@ body, .hello-text, .arrow, #navbar {
     padding: 2.5em;
     background: rgba(0, 0, 0, 0.75); }
     #contact .container p {
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      margin-bottom: 1em; }
+      #contact .container p a {
+        color: inherit;
+        text-decoration: none; }
   #contact .form {
     font-size: 1em; }
     #contact .form input[type="submit"] {

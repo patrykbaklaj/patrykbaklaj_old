@@ -10,8 +10,6 @@ $(document).ready(function() {
   $("body").fadeIn('fast', animateH1);
 
 
-
-
 // scrollspy for navbar
   $('body, html').scrollspy({
     target: '#navbar',
@@ -30,12 +28,15 @@ $(document).ready(function() {
   // scrolling effects for arrow
   $('.arrow').bind('click', function() {
     $('html, body').stop().animate({
-      scrollTop: $('#about').offset().top - 50
+      scrollTop: $('#about').offset().top - 78
     }, 1000, 'easeInExpo');
     event.preventDefault();
   })
 
+  // wow animation init
+  new WOW().init();
 
+  // Functions
   function setWindowHeight() {
     $(".fill-screen").css("height", window.innerHeight);
   }
