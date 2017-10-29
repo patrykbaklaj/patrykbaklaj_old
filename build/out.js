@@ -77,41 +77,43 @@ module.exports = __webpack_require__(2);
 
 $(document).ready(function() {
 
-  // for setting image size while resizing
-  setWindowHeight();
-  $(window).on("load resize", function () {
+  pageFucntionsInit();
+
+
+  function pageFucntionsInit() {
+    // for setting image size while resizing
     setWindowHeight();
-  });
+    $(window).on("load resize", function () {
+      setWindowHeight();
+    });
+    // for animation purpose
+    $("body").fadeIn('fast', animateH1);
+    // scrollspy for navbar
+    $('body, html').scrollspy({
+      target: '#navbar',
+      offset: 150
+    });
+    // scrolling effects for menu
+      $('nav a, #to-top').bind('click', function() {
+        $('html, body').stop().animate({
+          scrollTop: $($(this).attr('href')).offset().top - 50
+        }, 1400, 'easeInExpo');
+        event.preventDefault();
+      })
+      // scrolling effects for arrow
+      $('.arrow').bind('click', function() {
+        $('html, body').stop().animate({
+          scrollTop: $('#about').offset().top - 78
+        }, 1000, 'easeInExpo');
+        event.preventDefault();
+      })
 
-  // for animation purpose
-  $("body").fadeIn('fast', animateH1);
+      // wow animation init
+      new WOW().init();
 
-
-// scrollspy for navbar
-  $('body, html').scrollspy({
-    target: '#navbar',
-    offset: 150
-  });
-
-
-// scrolling effects for menu
-  $('nav a, #to-top').bind('click', function() {
-    $('html, body').stop().animate({
-      scrollTop: $($(this).attr('href')).offset().top - 50
-    }, 1400, 'easeInExpo');
-    event.preventDefault();
-  })
-
-  // scrolling effects for arrow
-  $('.arrow').bind('click', function() {
-    $('html, body').stop().animate({
-      scrollTop: $('#about').offset().top - 78
-    }, 1000, 'easeInExpo');
-    event.preventDefault();
-  })
-
-  // wow animation init
-  new WOW().init();
+      // hover Effects init
+      hoverEffects();
+  }
 
   // Functions
   function setWindowHeight() {
@@ -140,6 +142,17 @@ $(document).ready(function() {
 
   function showArrow(){
     $(".arrow, #navbar").fadeIn("600");
+  }
+
+  function hoverEffects(){
+    $('.project-item').on('mouseenter', function() {
+      $(this).addClass('effect');
+      $(this).find('figcaption').stop().fadeIn('slow');
+    })
+    $('.project-item').on('mouseleave', function() {
+      $(this).removeClass('effect');
+      $(this).find('figcaption').stop().fadeOut('slow');
+    })
   }
 
 });
